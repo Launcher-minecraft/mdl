@@ -1,0 +1,14 @@
+[
+  {
+    "username": "admin",
+    "passwordHash": "$2b$10$yIXG318HxSJJXQTpXOiITugva9JcXM6vISlMu1tlIrmwmZPDrAUZa"
+  },
+  {
+    "username": "pseudo1",
+    "passwordHash": "$2b$10$zFF65Hdfv2g5DFUwKVmW0OZeFzwjW7hEr/KediqQQQGhKnwdvqWsy"
+  },
+  {
+    "username": "pseudo2",
+    "passwordHash": "$2b$10$sM1.QYj3HbFBuJ7fPk7fjO14gntQb0ivFOCNsvuVk9cwRYukWWVTC"
+  }
+]

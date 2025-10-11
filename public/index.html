@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MDL Lycée</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#00bcd4">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="icon-192.png" alt="Logo MDL" class="logo">
+      <h1>Maison des Lycéens</h1>
+    </header>
+
+    <div class="panel" id="login-section">
+      <h2>Connexion</h2>
+      <input type="text" id="username" placeholder="Pseudo">
+      <input type="password" id="password" placeholder="Mot de passe">
+      <button class="bigBtn" id="login-btn">Se connecter</button>
+      <p class="msg" id="login-msg"></p>
+    </div>
+
+    <div class="panel" id="stock-section" style="display:none;">
+      <div class="topRow">
+        <h2>Stock actuel</h2>
+        <button class="smallBtn" id="refresh-btn">Actualiser</button>
+      </div>
+      <p id="status"></p>
+
+      <div id="boissons-section">
+        <h2 class="categoryTitle">Boissons</h2>
+        <div id="boissons"></div>
+      </div>
+
+      <div id="nourriture-section">
+        <h2 class="categoryTitle">Nourriture</h2>
+        <div id="nourriture"></div>
+      </div>
+    </div>
+
+    <footer>
+      &copy; MDL Lycée
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

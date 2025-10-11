@@ -1,0 +1,33 @@
+{
+  "ouvert": true,
+  "stock": {
+    "boissons": {
+      "coca": {
+        "quantite": 12,
+        "prix": 1.5
+      },
+      "jus d'orange": {
+        "quantite": 5,
+        "prix": 2
+      },
+      "eau": {
+        "quantite": 14,
+        "prix": 1
+      }
+    },
+    "nourriture": {
+      "chips": {
+        "quantite": 15,
+        "prix": 1.2
+      },
+      "barres chocolatées": {
+        "quantite": 9,
+        "prix": 1.5
+      },
+      "sandwichs": {
+        "quantite": 12,
+        "prix": 3
+      }
+    }
+  }
+}
