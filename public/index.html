@@ -2,49 +2,73 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MDL Lycée</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Planif Révisions</title>
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#00bcd4">
+  <meta name="theme-color" content="#2563eb">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <img src="icon-192.png" alt="Logo MDL" class="logo">
-      <h1>Maison des Lycéens</h1>
+  <main class="app">
+    <header class="hero card gradient">
+      <p class="badge">Mobile • Productif</p>
+      <h1>Planificateur de révision</h1>
+      <p class="subtitle">Ton plan auto en 30 secondes : matière, date d’examen, chapitres.</p>
+      <div class="stats" id="stats"></div>
     </header>
 
-    <div class="panel" id="login-section">
-      <h2>Connexion</h2>
-      <input type="text" id="username" placeholder="Pseudo">
-      <input type="password" id="password" placeholder="Mot de passe">
-      <button class="bigBtn" id="login-btn">Se connecter</button>
-      <p class="msg" id="login-msg"></p>
-    </div>
+    <section class="card">
+      <h2>Créer une matière</h2>
+      <form id="subject-form" class="stack">
+        <label>
+          Matière
+          <input type="text" id="subject-name" placeholder="Ex : Maths" required maxlength="40">
+        </label>
+        <div class="row two-cols">
+          <label>
+            Date de l'examen
+            <input type="date" id="exam-date" required>
+          </label>
+          <label>
+            Priorité
+            <select id="priority">
+              <option value="normale">Normale</option>
+              <option value="haute">Haute</option>
+            </select>
+          </label>
+        </div>
+        <label>
+          Chapitres à réviser
+          <textarea id="chapters" rows="4" placeholder="1 chapitre par ligne" required></textarea>
+        </label>
+        <button type="submit" class="primary">Créer le planning</button>
+      </form>
+      <p id="form-msg" class="msg" role="status"></p>
+    </section>
 
-    <div class="panel" id="stock-section" style="display:none;">
-      <div class="topRow">
-        <h2>Stock actuel</h2>
-        <button class="smallBtn" id="refresh-btn">Actualiser</button>
+    <section class="card">
+      <div class="row">
+        <h2>Aujourd'hui</h2>
+        <span id="today-date" class="chip"></span>
       </div>
-      <p id="status"></p>
+      <ul id="today-list" class="task-list"></ul>
+      <p id="today-empty" class="empty">Aucune tâche aujourd'hui ✅</p>
+    </section>
 
-      <div id="boissons-section">
-        <h2 class="categoryTitle">Boissons</h2>
-        <div id="boissons"></div>
+    <section class="card">
+      <h2>Prochaines révisions (7 jours)</h2>
+      <div id="future-list" class="future"></div>
+      <p id="future-empty" class="empty">Ajoute une matière pour générer ton plan.</p>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <h2>Matières enregistrées</h2>
+        <button id="reset-btn" class="danger" type="button">Tout effacer</button>
       </div>
-
-      <div id="nourriture-section">
-        <h2 class="categoryTitle">Nourriture</h2>
-        <div id="nourriture"></div>
-      </div>
-    </div>
-
-    <footer>
-      &copy; MDL Lycée
-    </footer>
-  </div>
+      <ul id="subject-list" class="subject-list"></ul>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
